@@ -17,7 +17,7 @@ public class AvatarController {
         this.avatarService = avatarService;
     }
 
-    @PostMapping("store")
+    @PostMapping("")
     ResponseEntity<String> store(@RequestParam("image") MultipartFile image){
         return ResponseEntity.ok().body(avatarService.save(image));
     }
